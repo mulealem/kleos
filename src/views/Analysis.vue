@@ -7,14 +7,16 @@
     >
       <dot-loader :loading="isLoading" color="blue"></dot-loader>
       <div class="p-5">Analyzing @{{ username }}...</div>
+      <div class="text-xs text-neutral-500">
+        It may take up to a couple of minutes to analyze a profile so please be
+        patient.
+      </div>
     </div>
     <div
       v-if="!isLoading"
       class="w-full pt-3 pb-5 border-b border-b-neutral-300 px-4 flex justify-center"
     >
       <div class="w-full max-w-6xl py-4">
-        <!-- <div>{{ user }}</div> -->
-
         <div class="w-full flex items-center">
           <div class="h-16 w-16 md:w-16 md:h-16 rounded-full bg-red-100 mr-5">
             <div class="w-full h-full rounded-full bg-neutral-300">
@@ -33,11 +35,6 @@
                 class="ml-2 w-5"
               />
             </h1>
-            <!-- <div>
-              <span class="text-sm text-neutral-600"
-                >Updated: October 12, 2022
-              </span>
-            </div> -->
           </div>
         </div>
         <div class="pt-8 max-w-3xl">
@@ -322,7 +319,7 @@
               <h2 class="pb-3 text-xl font-bold border-b border-b-neutral-200">
                 Hashtags
               </h2>
-              <p class="mt-4 mb-2">
+              <p class="mt-4 mb-2 flex flex-wrap">
                 <a
                   v-for="(hashtag, index) in tweetAnalysis.hashtags"
                   :key="index"
