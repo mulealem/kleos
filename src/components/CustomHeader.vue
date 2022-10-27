@@ -72,7 +72,8 @@ export default {
     search() {
       if (this.username) {
         this.$router.push({ name: "analysis", params: { id: this.username } });
-        if (this.$route.params.name == "analysis") {
+        console.log(this.$route);
+        if (this.$route.name == "analysis") {
           this.$router.go(this.$router.currentRoute);
         }
       }
