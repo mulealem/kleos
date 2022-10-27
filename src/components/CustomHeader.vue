@@ -72,7 +72,9 @@ export default {
     search() {
       if (this.username) {
         this.$router.push({ name: "analysis", params: { id: this.username } });
-        this.$router.go(this.$router.currentRoute);
+        if (this.$route.params.name == "analysis") {
+          this.$router.go(this.$router.currentRoute);
+        }
       }
     },
   },
