@@ -7,7 +7,7 @@
         <img class="w-10 h-10 mr-2" src="../assets/logo.png" alt="Kleos" />
         <div class="text-lg hidden md:block">Kleos</div>
       </router-link>
-      <form class="flex items-center">
+      <form class="flex items-center" @submit.prevent="search">
         <label for="simple-search" class="sr-only">Search</label>
         <div class="relative w-full">
           <div
@@ -29,6 +29,7 @@
           </div>
           <input
             type="text"
+            v-model="username"
             id="simple-search"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search"
@@ -62,5 +63,17 @@
 <script>
 export default {
   name: "custom-header",
+  data() {
+    return {
+      username: "",
+    };
+  },
+  methods: {
+    search() {
+      if (this.username) {
+        this.$router.push({ name: "analysis", params: { id: this.username } });
+      }
+    },
+  },
 };
 </script>

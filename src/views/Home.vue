@@ -175,7 +175,6 @@ export default {
   },
   methods: {
     search() {
-      console.log("username: ", this.username);
       if (this.username) {
         this.$router.push({ name: "analysis", params: { id: this.username } });
       }
