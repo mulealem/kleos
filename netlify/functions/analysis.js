@@ -1,5 +1,4 @@
 var axios = require("axios");
-const { NLClient, Language } = require("@expertai/nlapi");
 require("dotenv").config();
 
 var EAI_username = process.env.EAI_USERNAME;
