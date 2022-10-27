@@ -32,23 +32,10 @@ exports.handler = async function (event, context) {
   };
 
   eai_token = "Bearer ";
-  console.log("_________________", eai_credential);
   var eai_login = await axios(eai_config);
   if (eai_login) {
     eai_token = eai_token + eai_login.data;
-    // console.log("res:", eai_login);
   }
-
-  // console.log(eai_login);
-  // axios(eai_config)
-  //   .then(function (response) {
-  //     eai_token = eai_token + response.data;
-  //     console.log("eai_token aquired!");
-  //     // console.log(eai_token);
-  //   })
-  //   .catch(function (error) {
-  //     console.log("error login");
-  //   });
 
   const url = "https://api.twitter.com/2/";
   const authorization = "Bearer " + TWITTER_token;
@@ -66,7 +53,6 @@ exports.handler = async function (event, context) {
   };
 
   var user = await axios(userConfig);
-  // console.log("user: ", user.data.data);
 
   var tweetConfig = {
     method: "get",
@@ -74,7 +60,7 @@ exports.handler = async function (event, context) {
       url +
       "users/" +
       user.data.data.id +
-      "/tweets?tweet.fields=author_id,entities,in_reply_to_user_id,source,public_metrics&max_results=15",
+      "/tweets?tweet.fields=author_id,entities,in_reply_to_user_id,source,public_metrics&max_results=100",
     headers: {
       Authorization: authorization,
     },
