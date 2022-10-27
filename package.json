@@ -1,0 +1,38 @@
+{
+  "name": "kloes",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@expertai/nlapi": "^2.0.0",
+    "axios": "^1.1.2",
+    "dotenv": "^16.0.3",
+    "flowbite": "^1.5.3",
+    "moment": "^2.29.4",
+    "netlify-cli": "^12.0.11",
+    "number-abbreviate": "^2.0.0",
+    "numeral": ">=2",
+    "vue": "^2.6.14",
+    "vue-numerals": "^4.0.6",
+    "vue-router": "^3.5.1",
+    "vue-spinner": "^1.0.4",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.1.8",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
