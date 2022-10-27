@@ -112,7 +112,7 @@
               </h2>
               <div class="mt-2 flex flex-wrap">
                 <div
-                  class="bg-white w-full border rounded-lg p-5"
+                  class="bg-white w-full border rounded-lg p-5 mb-2"
                   v-for="(tweet, index) in hateSpeechs"
                   :key="index"
                 >

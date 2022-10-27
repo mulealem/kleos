@@ -7,7 +7,6 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "@expertai/nlapi": "^2.0.0",
     "axios": "^1.1.2",
     "dotenv": "^16.0.3",
     "flowbite": "^1.5.3",
